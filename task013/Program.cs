@@ -1,11 +1,10 @@
-﻿Cosole.WriteLine("Введите число");
-int number = Convert.ToInt32(ReadLine());
+﻿Console.WriteLine("Введите число");
+string number = Console.ReadLine();
+int length = number.Length;
 
-
-if (number/100 > 0)
-{
-
-
-
-}
-
+if (length>2)
+    {
+    char thirdChar = number[2];
+    Console.WriteLine(thirdChar);
+    }
+else Console.WriteLine("Третьей цифры нет");
