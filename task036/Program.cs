@@ -8,7 +8,7 @@ void FillArray (int[] array1)
     int index = 0;
     while (index < length)
     {
-        array1[index] = new Random().Next(100, 1000);
+        array1[index] = new Random().Next(1, 10);
         index++;
     }
 //    for (int i=0; i < collection.Length; i++)
@@ -33,8 +33,8 @@ int EvenNumber (int[] array1)
     int evenNumber = 0;
     while (i < count)
     {
-        if (array1[i]%2 > 0)
-        evenNumber++;
+        if (i%2 > 0)
+        evenNumber= evenNumber + array1[i];
         i++;
     }
     return(evenNumber);
