@@ -18,32 +18,54 @@ void Demo(int[] Demoarray)
     Console.Write("[");
     for (int j=0; j<Demoarray.Length; j++)
     {
-        Console.Write(Demoarray[j] + ", ");
+        Console.Write(Demoarray[j] + "  ");
     }
-    Console.Write("] => ");
+    Console.Write("]" );
 }
 
-int [] array = new int [5];
+void MultiPulti (int [] array2, int [] array3)
+{
+int i = 0;
+int j = array2.Length-1;
+
+while (i < array2.Length/2)
+{
+    int multi = array2[i] * array2[j];
+    array3[i] = multi;
+    i++;
+    j--;
+
+}
+if (array2.Length % 2 !=0)
+{
+    array3[array2.Length/2] = array2[array2.Length/2];
+}
+}
+
+int [] array = new int [4];
+int [] multiarray = new int [array.Length/2];
+int [] multiarrayNotEven = new int [array.Length/2 + 1];
 FillArray(array);
 Demo(array);
 Console.WriteLine();
 
-int length = (array.Length)/2;
-int count = 0;
-int i = 0;
-int j = array.Length-1;
-while (count < length)
+if (array.Length % 2 == 0)
 {
-    int multi = array[i] * array[j];
-    i++;
-    j--;
-    count++;
-    Console.Write(" " + multi);
+MultiPulti(array, multiarray);
+Demo (multiarray);
 }
-if (array.Length %2 != 0)
+else
 {
-    Console.Write(" " + array[length]);
+MultiPulti (array, multiarrayNotEven);
+Demo (multiarrayNotEven);
 }
+
+
+
+
+
+
+
 
         
         
