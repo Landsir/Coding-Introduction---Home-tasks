@@ -59,15 +59,3 @@ else
 MultiPulti (array, multiarrayNotEven);
 Demo (multiarrayNotEven);
 }
-
-
-
-
-
-
-
-
-        
-        
-
-
