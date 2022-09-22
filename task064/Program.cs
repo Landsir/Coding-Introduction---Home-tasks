@@ -4,14 +4,20 @@
 // M = 4; N = 8. -> ""4, 6, 7, 8""
 
 
-Console.WriteLine("Input number M");
+Console.Write("Input number M: ");
 int numberM = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number N, bigger than M");
+Console.Write("Input number N: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 if (numberN > numberM)
 {for (int i =numberM; i <= numberN; i++)
-{
+    {
         Console.Write(i + " ");
+    }
 }
+else
+{
+    for (int i = numberN; i <= numberM; i++)
+    {
+        Console.Write(i + " ");
+    }
 }
-else Console.WriteLine ("Incorrect! Input numbers M < N");
